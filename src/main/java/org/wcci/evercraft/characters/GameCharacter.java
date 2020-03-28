@@ -11,4 +11,8 @@ public class GameCharacter {
     public String getName() {
         return name;
     }
+
+    public void changeName(String newName) {
+        name = newName;
+    }
 }

@@ -19,5 +19,10 @@ public class GameCharacterTest {
         assertThat(underTest.getName()).isEqualTo("Bob");
     }
 
+    @Test
+    public void characterShouldBeAbleToChangeName() {
+        underTest.changeName("Joe");
+        assertThat(underTest.getName()).isEqualTo("Joe");
+    }
 
 }
