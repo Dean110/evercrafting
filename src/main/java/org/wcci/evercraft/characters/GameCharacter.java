@@ -2,9 +2,9 @@ package org.wcci.evercraft.characters;
 
 public class GameCharacter {
     private String name;
-    private String alignment;
+    private Alignment alignment;
 
-    public GameCharacter(String name, String alignment) {
+    public GameCharacter(String name, Alignment alignment) {
 
         this.name = name;
         this.alignment = alignment;
@@ -18,11 +18,11 @@ public class GameCharacter {
         name = newName;
     }
 
-    public String getAlignment() {
+    public Alignment getAlignment() {
         return alignment;
     }
 
-    public void changeAlignment(String newAlignment) {
+    public void changeAlignment(Alignment newAlignment) {
         alignment = newAlignment;
     }
 }
