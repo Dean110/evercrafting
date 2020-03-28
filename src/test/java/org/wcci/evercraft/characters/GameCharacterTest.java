@@ -11,7 +11,7 @@ public class GameCharacterTest {
 
     @BeforeEach
     void setUp() {
-        underTest = new GameCharacter("Bob");
+        underTest = new GameCharacter("Bob", "GOOD");
     }
 
     @Test
@@ -23,6 +23,17 @@ public class GameCharacterTest {
     public void characterShouldBeAbleToChangeName() {
         underTest.changeName("Joe");
         assertThat(underTest.getName()).isEqualTo("Joe");
+    }
+
+    @Test
+    public void characterShouldHaveAnAlignment() {
+        assertThat(underTest.getAlignment()).isEqualTo("GOOD");
+    }
+
+    @Test
+    public void characterShouldBeAbleToChangeAlignment() {
+        underTest.changeAlignment("EVIL");
+        assertThat(underTest.getAlignment()).isEqualTo("EVIL");
     }
 
 }
