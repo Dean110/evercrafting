@@ -4,6 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.wcci.evercraft.characters.Alignment.EVIL;
+import static org.wcci.evercraft.characters.Alignment.GOOD;
 
 public class GameCharacterTest {
 
@@ -11,7 +13,7 @@ public class GameCharacterTest {
 
     @BeforeEach
     void setUp() {
-        underTest = new GameCharacter("Bob");
+        underTest = new GameCharacter("Bob", GOOD);
     }
 
     @Test
@@ -23,6 +25,17 @@ public class GameCharacterTest {
     public void characterShouldBeAbleToChangeName() {
         underTest.changeName("Joe");
         assertThat(underTest.getName()).isEqualTo("Joe");
+    }
+
+    @Test
+    public void characterShouldHaveAnAlignment() {
+        assertThat(underTest.getAlignment()).isEqualTo(GOOD);
+    }
+
+    @Test
+    public void characterShouldBeAbleToChangeAlignment() {
+        underTest.changeAlignment(EVIL);
+        assertThat(underTest.getAlignment()).isEqualTo(EVIL);
     }
 
 }
