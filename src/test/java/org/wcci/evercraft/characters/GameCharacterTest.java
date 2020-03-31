@@ -41,4 +41,8 @@ public class GameCharacterTest {
     public void characterShouldHaveADefaultArmorClassOfTen(){
         assertThat(underTest.getArmorClass()).isEqualTo(10);
     }
+    @Test
+    public void characterShouldHaveADefaultHitPointCountOfFive(){
+        assertThat(underTest.getHitPoints()).isEqualTo(5);
+    }
 }

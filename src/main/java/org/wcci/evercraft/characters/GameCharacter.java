@@ -29,4 +29,8 @@ public class GameCharacter {
     public int getArmorClass() {
         return 10;
     }
+
+    public int getHitPoints() {
+            return 5;
+    }
 }
