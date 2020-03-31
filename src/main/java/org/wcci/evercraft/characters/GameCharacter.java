@@ -25,4 +25,8 @@ public class GameCharacter {
     public void changeAlignment(Alignment newAlignment) {
         alignment = newAlignment;
     }
+
+    public int getArmorClass() {
+        return 10;
+    }
 }
