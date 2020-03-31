@@ -37,8 +37,14 @@ public class GameCharacterTest {
         underTest.changeAlignment(EVIL);
         assertThat(underTest.getAlignment()).isEqualTo(EVIL);
     }
+
     @Test
-    public void characterShouldHaveADefaultArmorClassOfTen(){
+    public void characterShouldHaveADefaultArmorClassOfTen() {
         assertThat(underTest.getArmorClass()).isEqualTo(10);
+    }
+
+    @Test
+    public void characterShouldHaveADefaultHitPointCountOfFive() {
+        assertThat(underTest.getHitPoints()).isEqualTo(5);
     }
 }
