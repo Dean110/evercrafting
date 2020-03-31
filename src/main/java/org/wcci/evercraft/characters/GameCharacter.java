@@ -31,6 +31,6 @@ public class GameCharacter {
     }
 
     public int getHitPoints() {
-            return 5;
+        return 5;
     }
 }
